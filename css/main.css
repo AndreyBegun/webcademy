@@ -1,7 +1,8 @@
-html {
+html, body {
     font-family: 'PT Sans Caption', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    min-width: 280px;
 }
 img {
     display: inline-block;
@@ -9,7 +10,13 @@ img {
 a {
     transition: 0.2s ease-out;
 }
-/* grid  */
+
+* {
+    
+    box-sizing: border-box;
+        
+}
+                                                        /* grid  */
 
 .container {
     width: 1140px;
@@ -25,20 +32,23 @@ a {
 .col-4 {
     width: 360px;
     margin-right: 30px;
-    float: left;
+    /* float: left; */
 }
 .col-4:last-child {
     margin-right: 0px;
 }
 
-/* header */
+                                                              /* header */
 .header {
     background: rgb(240, 198, 186);
     background-image: url("../img/bg/copyright-free-images-1920x1080.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-repeat: cover;
+
     height: 100vh;
+    min-height: 400px;
+    
     color: rgb(0, 0, 0);
     text-shadow: #FFF 2px 3px 4px, #FFF -2px -3px 4px;
     text-align: center;
@@ -69,7 +79,7 @@ a {
     left: 50%;
 }
 
-/* portfolio */
+                                      /* portfolio */
 .portfolio {
     padding-top: 70px;
     padding-bottom: 100px;
@@ -86,6 +96,10 @@ a {
 }
 .portfoloo-item__img {
     margin-bottom: 24px;
+}
+.portfoloo-item__img img {
+    max-width: 100%;
+    height: auto;
 }
 .portfolio-item__title {
     font-size: 24px;
@@ -107,7 +121,7 @@ a {
 
 }
 
-/* portfolio single page */
+                                        /* portfolio single page */
 .portfolio-single-page {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -148,7 +162,13 @@ a {
     color: #fff;
     background-color: #061634;
 }
-/* footer */
+
+
+
+                                            /* footer */
+
+
+
 .footer {
     background-color: #061634;
     color: #6479a2;
@@ -214,6 +234,47 @@ p.footer__social-icons a:hover {
 .button:hover {
     color: #061634;
     background-color: #FFF;
+}
+
+                                        /* media АДАПТИВ */
+ /* при ширине экрана 1160 px и менее - будет выполнен медиа запрос*/
+@media (max-width: 1160px) {
+    .container {
+        width: 100%; 
+    }
+    .col-4 {
+        width: 100%;
+
+        margin: 0;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header_title {
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 15px;
+    }
+    .header_slogan {
+        font-size: 22px;
+        line-height: 38px;
+    }
+    .portfolio {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    .title {
+        font-size: 36px;
+    }
+    .footer {
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
 }
 
 
